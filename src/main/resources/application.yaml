@@ -5,6 +5,10 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/myrealm
+          issuer-uri: http://localhost:9000
+  kafka:
+    consumer:
+      group-id: my-group
+      client-id: ${INSTANCE_ID}
 server:
   port: 8082
