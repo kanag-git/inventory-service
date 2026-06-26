@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessageConsumer {
 
-    @KafkaListener(
+/*    @KafkaListener(
             topics = "test-topic",
             groupId = "my-group"
-    )
+    )*/
+    @KafkaListener(topics = "file-topic", groupId = "file-group")
     public void listen(String message) {
 
         System.out.println("Thread " + Thread.currentThread()

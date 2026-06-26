@@ -16,8 +16,8 @@ public class KafkaConsumerConfig {
     @Bean
     public ConsumerFactory<String, String> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
-        props.put("bootstrap.servers", "localhost:9092");
-        props.put("group.id", "my-group");
+        props.put("bootstrap.servers", "localhost:19092");
+        props.put("group.id", "file-group");
         props.put("key.deserializer", StringDeserializer.class);
         props.put("value.deserializer", StringDeserializer.class);
         props.put("auto.offset.reset", "earliest");
